@@ -1,0 +1,148 @@
+body{
+    min-width: 200px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+main{
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(230,230,241,1) 50%, rgba(255,255,255,1) 100%);
+    height: 100%;
+    text-align: center;
+}
+
+header{
+    display:  flex;
+    justify-content: space-between;
+    height: 5vh;
+    min-height: 50px;
+}
+
+.profile{
+    position: relative; 
+}
+
+.avatar{
+    width: 100%;  
+    height: 80vh;
+    min-height: 400px;
+    object-fit: cover;
+}
+
+.badge{
+    box-sizing: border-box;
+    position: absolute;
+    top: 50px;
+    bottom: auto;
+    left: 20px;
+    width: 200px;
+    transform: rotate(-20deg);
+}
+
+.desc{
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 15px;
+    text-align: left;
+}
+
+.name{
+    color: #FFFFFF;
+    font-size: 2rem;
+}
+
+.bio{
+    color: #B7B7B7;
+    font-size: 1.5rem;
+}
+
+.buttons{
+    text-align: center;    
+}
+
+.btn{
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    border: none;
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-color: #FFFFFF;
+    margin: 25px;
+    cursor: pointer;
+}
+
+.reject-btn{
+    background-image: url('./images/icon-cross.png'); 
+}
+
+.reject-btn:hover{
+    background-color: #FFE7EF;
+}
+
+.heart-btn{
+    background-image: url('./images/icon-heart.png'); 
+}
+
+.heart-btn:hover{
+    background-color: #DBFFF4;
+}
+
+.liked-post-container,
+.swiped-post-container
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr)) ;
+    column-gap: 25px;
+}
+.liked-post,
+.swiped-post
+{
+    box-sizing: border-box;
+    width: 100%;
+    height: 90%;
+    position: relative;
+}
+.liked-img,
+.swiped-img
+{
+    width: 100%;
+    height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.liked-post:hover .overlay{
+    opacity: 0.5;
+    background-color: #DBFFF4;
+}
+
+.swiped-post:hover .overlay{
+    opacity: 0.5;
+    background-color: #FFE7EF;
+}
+
+.dog-name{
+    font-size: 3em;
+    position: absolute;
+    left: 50%;
+    top: 50%;   
+    transform: translate(-50%, -50%);
+}
+
+.swiped-post{
+    color: red;
+}
+.liked-post{
+    color: green;
+}
